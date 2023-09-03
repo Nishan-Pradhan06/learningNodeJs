@@ -1,14 +1,15 @@
 const express = require("express") // require
 const app = express()//storing it in app
 
-app.get('/', (req, res) => {
-    res.send("Home Page")
-})
 
-app.get("/about", (req, res) => {
-    res.send("about page")
-}
-)
+
+app.set("view engine", "ejs")
+
+
+app.get('/', (req, res) => {
+    // res.send("<h1>Home Page</h1>")
+    res.render("home")
+})
 
 
 
